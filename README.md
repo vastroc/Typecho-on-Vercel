@@ -1,2 +1,56 @@
 # Typecho-on-Vercel
-使用Vercel部署Typecho
+
+该项目能够实现在Vercel平台上一键部署Typecho，自动化程度较高，部署非常丝滑~
+
+## 部署步骤
+
+### 1.拉取源码
+
+**方法一：Vercel一键部署（推荐）**
+
+<a href="https://vercel.com/new/clone?repository-url=https://github.com/vastroc/Typecho-on-Vercel" target="_blank" rel="noreferrer"><img src="https://vercel.com/button" alt="部署到 Vercel"></a>
+
+**方法二：直接fork本项目**
+
+> 建议拉取源码后及时将仓库设为私有，以防敏感信息泄露
+
+
+### 2.创建数据库
+
+在创建好的vercel项目中，选择`Storage - Create Database - Neon`，然后一直下一步，全部默认
+
+
+### 3.开始安装
+进入`域名/install.php`，一路下一步，非常丝滑~
+
+最后为网站设置后台用户名和密码即可
+
+至此，安装完毕！
+
+
+## 更换主题
+创建一个Codespaces环境，然后将下载好的主题拖入`/usr/themes`文件夹中，提交并push，文件夹名称需和主题名称一致（即不能包含`v1.6`、`-main`等后缀），否则将无法正常使用。
+
+![alt text](img/image.png)
+
+
+## 图片上传
+
+
+## 开启调试功能（选）
+
+因为PHP对Vercel没有写入权限，无法查看到错误日志，所以代码调试很不方便
+
+📌**解决方案：临时开启Typeho调试模式**
+
+在`config.inc.php`中添加如下代码：
+
+```
+/** 开启数据库错误日志 */
+define('__TYPECHO_DEBUG__', true);
+```
+
+记得及时关闭！
+
+> 本项目代码均基于Typecho官方在GitHub的开源代码修改，本次采用版本号为[typecho 1.2.1](https://github.com/typecho/typecho/releases/tag/v1.2.1)
+> 该项目参考来源于：https://fordes.dev/posts/tutorials/typecho-vercel/
