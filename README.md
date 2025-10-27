@@ -19,8 +19,14 @@
 
 在创建好的vercel项目中，选择`Storage - Create Database - Neon`，然后一直下一步，全部默认
 
+### 3.再次部署Vercel
 
-### 3.开始安装
+进入`Deployments - Create Deployment`
+
+<img width="1870" height="272" alt="image" src="https://github.com/user-attachments/assets/12c30b61-237f-4485-9afa-73fccdc62dbd" />
+
+
+### 4.开始安装
 进入`域名/install.php`，一路下一步，非常丝滑~
 
 最后为网站设置后台用户名和密码即可
@@ -31,7 +37,7 @@
 ## 更换主题
 创建一个Codespaces环境，然后将下载好的主题拖入`/usr/themes`文件夹中，提交并push，文件夹名称需和主题名称一致（即不能包含`v1.6`、`-main`等后缀），否则将无法正常使用。
 
-![alt text](img/image.png)
+<img width="407" height="390" alt="image" src="https://github.com/user-attachments/assets/21f775b6-b090-4591-930e-aca5532848a5" />
 
 
 ## 图片上传
